@@ -5,7 +5,7 @@ pipeline{
         stage ('Git Pull') {
             steps {
                 git url: 'https://github.com/Ashish-A-Kulkarni/SPE_MINI_PROJECT.git',
-                	branch: 'main'
+                	branch: 'master'
             }
         }
 
