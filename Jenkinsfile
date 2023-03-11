@@ -25,6 +25,7 @@ pipeline{
             steps {
                 withDockerRegistry([ credentialsId: "docker-jenkins", url: "" ]) {
                 dockerImage.push()
+                }
             }
         }
 
