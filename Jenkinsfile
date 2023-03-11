@@ -24,7 +24,7 @@ pipeline{
         stage('Publish Docker Image') {
             steps {
                 withDockerRegistry([ credentialsId: "docker-jenkins", url: "" ]) {
-                dockerImage.push()
+                    sh 'docker push ashishkulkarni410/scientificcalculator:latest'
                 }
             }
         }
