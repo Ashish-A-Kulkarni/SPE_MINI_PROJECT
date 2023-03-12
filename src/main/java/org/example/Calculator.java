@@ -13,7 +13,7 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
 
         double num1,num2;
-
+        System.out.println("-----------SCIENTIFIC CALCULATOR-------");
         System.out.println("Enter Numbers");
         num1 = scanner.nextDouble();
 
@@ -23,15 +23,14 @@ public class Calculator {
     }
 
     public double factorial(double num1) {
-        double result = fact(num1);
-        return result;
+        double result = 1;
+        for(int i = 1; i <= num1; ++i) {
+            result *= i;
+        }
+        return  result;
     }
 
-    public double fact(double num) {
-        double res = 1;
-        for(int i = 1; i <= num; ++i) {
-            res *= i;
-        }
-        return  res;
-    }
+
+
+
 }

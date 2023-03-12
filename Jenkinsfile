@@ -23,15 +23,17 @@ pipeline{
 
         stage('Publish Docker Image') {
             steps {
-                docker.withRegistry('','docker-jenkins') {
-                    sh 'docker push ashishkulkarni410/scientificcalculator:latest'
+                script {
+                    docker.withRegistry('','docker-jenkins') {
+                        sh 'docker push ashishkulkarni410/scientificcalculator:latest'
                     }
+                }
             }
         }
 
 //         stage('Clean Docker Images') {
 //             steps {
-//                 sh 'docker rmi -f inspiringrai/calcproj:latest'
+//                 sh 'docker rmi -f ashishkulkarni410/scientificcalculator:latest'
 //             }
 //         }
 //
