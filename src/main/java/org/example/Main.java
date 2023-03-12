@@ -2,13 +2,13 @@ package org.example;
 
 import java.util.Scanner;
 
-public class Calculator {
+public class Main {
 
-    public Calculator() {
+    public Main() {
     }
     public static void main(String[] args) {
 
-        Calculator calculator = new Calculator();
+        Main calculator = new Main();
 
         Scanner scanner = new Scanner(System.in);
 
