@@ -29,16 +29,17 @@ pipeline{
             }
         }
 
-//         stage('Clean Docker Images') {
-//             steps {
-//                 sh 'docker rmi -f ashishkulkarni410/scientificcalculator:latest'
-//             }
-//         }
-//
-//         stage('Deploy and Run Image'){
-//             steps {
-//                 ansiblePlaybook becomeUser: null, colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'playbook.yml', sudoUser: null
-//             }
-//         }
+         stage('Clean Docker Images and Containers') {
+             steps {
+                 sh 'docker rm -f scientificcalculator'
+                 sh 'docker rmi -f ashishkulkarni410/scientificcalculator:latest'
+             }
+         }
+
+         stage('Deploy and Run Image'){
+             steps {
+                 ansiblePlaybook playbook: 'playbook.yml'
+             }
+         }
     }
 }

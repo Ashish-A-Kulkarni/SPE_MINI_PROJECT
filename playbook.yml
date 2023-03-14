@@ -1,0 +1,8 @@
+---
+- hosts : localhost
+  tasks:
+    - name : Pull Docker Image From Docker Hub
+      shell : docker pull ashishkulkarni410/scientificcalculator:latest
+
+    - name : Run Container
+      shell : docker run -it --name scientificcalculator -d ashishkulkarni410/scientificcalculator /bin/bash
