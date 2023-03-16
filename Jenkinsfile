@@ -32,7 +32,7 @@ pipeline{
          stage('Clean Docker Images and Containers') {
              steps {
                  sh 'docker rm -f scientificcalculator'
-                 sh 'docker rmi -f ashishkulkarni410/scientificcalculator:latest'
+                 sh 'docker rmi -f ashishkulkarni410/scientificcalculator'
              }
          }
 

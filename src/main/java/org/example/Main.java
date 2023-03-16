@@ -1,11 +1,17 @@
 package org.example;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;
 
 public class Main {
 
     public Main() {
     }
+
+    private static final Logger logger = LogManager.getLogger(Main.class);
+
     public static void main(String[] args) {
 
         Main calculator = new Main();
@@ -63,24 +69,28 @@ public class Main {
         for(int i = 1; i <= num1; ++i) {
             result *= i;
         }
+        logger.info("[FACTORIAL OF] : " + num1 + " [RESULT] : " + result);
         return  result;
     }
 
     public double squareRoot(double num1) {
         double result;
         result=Math.sqrt(num1);
+        logger.info("[SQUARE ROOT OF] : " + num1 + " [RESULT] : " + result);
         return result;
     }
 
     public double naturalLog(double num1) {
         double result;
         result = Math.log(num1);
+        logger.info("[NATURAL LOG OF] : " + num1 + " [RESULT] : " + result);
         return result;
     }
 
     public double powerFunction(double num1, double num2) {
         double result;
         result = Math.pow(num1,num2);
+        logger.info("[POWER OF " + num1 + " TO " + num2 + "] [RESULT] : " + result);
         return result;
     }
 

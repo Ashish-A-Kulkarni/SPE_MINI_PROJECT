@@ -5,4 +5,4 @@
       shell : docker pull ashishkulkarni410/scientificcalculator:latest
 
     - name : Run Container
-      shell : docker run -it --name scientificcalculator -d ashishkulkarni410/scientificcalculator /bin/bash
+      shell : docker create -it --name scientificcalculator ashishkulkarni410/scientificcalculator
