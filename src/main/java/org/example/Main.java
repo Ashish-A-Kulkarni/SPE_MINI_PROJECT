@@ -65,6 +65,7 @@ public class Main {
         }while(flag==1);
     }
 
+    //factorial function
     public double factorial(double num1) {
         double result = 1;
         for(int i = 1; i <= num1; ++i) {
