@@ -10,6 +10,7 @@ public class Main {
     public Main() {
     }
 
+    //For logs
     private static final Logger logger = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
